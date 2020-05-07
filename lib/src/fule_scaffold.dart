@@ -6,7 +6,6 @@ class FuleScaffold extends StatelessWidget {
   final Color statusBarColor;
   final bool useSafeArea;
   final Color backgroundColor;
-  final PreferredSizeWidget appBar;
   final Widget body;
 
   const FuleScaffold({
@@ -14,9 +13,8 @@ class FuleScaffold extends StatelessWidget {
     this.statusBarStyle = StatusBarStyle.black,
     this.statusBarColor = Colors.transparent,
     this.useSafeArea = true,
-    this.appBar,
-    this.body,
     this.backgroundColor,
+    this.body,
   }) : super(key: key);
 
   @override
@@ -51,7 +49,6 @@ class FuleScaffold extends StatelessWidget {
     return AnnotatedRegion(
       value: systemUiOverlayStyle,
       child: Scaffold(
-        appBar: appBar,
         backgroundColor: backgroundColor,
         resizeToAvoidBottomPadding: false,
         body: _useSafeArea(),
